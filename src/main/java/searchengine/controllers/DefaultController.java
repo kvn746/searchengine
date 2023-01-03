@@ -12,7 +12,8 @@ public class DefaultController {
      * Это делает библиотека Thymeleaf.
      */
     @RequestMapping("/")
-    public String index() {
+    public String index()
+    {
         return "index";
     }
 }

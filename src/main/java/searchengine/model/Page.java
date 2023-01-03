@@ -1,8 +1,11 @@
 package searchengine.model;
 
+import org.springframework.stereotype.Indexed;
+
 import javax.persistence.*;
 
 @Entity
+//@Table(indexes = @Index(columnList = "Path", name = "path_index"))
 public class Page
 {
     @Id

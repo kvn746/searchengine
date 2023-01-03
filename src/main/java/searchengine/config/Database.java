@@ -5,13 +5,13 @@ import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
-
-@Getter
 @Setter
+@Getter
 @Component
-@ConfigurationProperties(prefix = "indexing-settings")
-public class SitesList
+@ConfigurationProperties(prefix = "spring.datasource")
+public class Database
 {
-    private List<Site> sites;
+    private String username;
+    private String password;
+    private String url;
 }

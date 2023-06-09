@@ -2,14 +2,12 @@ package searchengine;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import searchengine.config.Database;
+import org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration;
 
-@SpringBootApplication
+@SpringBootApplication //(scanBasePackages = {"boot.registration"} , exclude = JpaRepositoriesAutoConfiguration.class)
 public class Application {
     public static void main(String[] args)
     {
         SpringApplication.run(Application.class, args);
-        Database database = new Database();
-        System.out.println(database.getUsername());
     }
 }

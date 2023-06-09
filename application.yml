@@ -14,9 +14,21 @@ spring:
     show-sql: true
 indexing-settings:
   sites:
-    - url: https://www.lenta.ru
-      name: Лента.ру
-    - url: https://www.skillbox.ru
-      name: Skillbox
-    - url: https://www.playback.ru
-      name: PlayBack.Ru
+#    - url: https://www.lenta.ru
+#      name: Лента.ру
+#    - url: https://www.skillbox.ru
+#      name: Skillbox
+#    - url: https://www.playback.ru
+#      name: PlayBack.Ru
+    - url: https://comunello.msk.ru
+      name: Comunello.MSK
+indexing-errors:
+  errors:
+    - name: indexing_in_progress
+      message: Индексация уже запущена
+    - name: indexing_not_started
+      message: Индексация не запущена
+parser-settings:
+  user-agent: HeliontSearchBot
+  referrer: https://www.google.com
+  get-parameters: ?#%

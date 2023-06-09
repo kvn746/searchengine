@@ -1,9 +1,14 @@
 package searchengine.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@Setter
+@Getter
 public class Site
 {
     @Id
@@ -20,52 +25,4 @@ public class Site
     private String url;
     @Column(nullable = false)
     private String name;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public IndexingStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(IndexingStatus status) {
-        this.status = status;
-    }
-
-    public LocalDateTime getStatusTime() {
-        return statusTime;
-    }
-
-    public void setStatusTime(LocalDateTime statusTime) {
-        this.statusTime = statusTime;
-    }
-
-    public String getLastError() {
-        return lastError;
-    }
-
-    public void setLastError(String lastError) {
-        this.lastError = lastError;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }
